@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import "tailwindcss";
+
+:root {
+  --pixel: 'Press Start 2P', monospace;
+  --mono:  'Courier New', Courier, monospace;
+}
+
+body {
+  background: #0a0a14;
+  color: #e8e8f0;
+  font-family: var(--mono);
+  -webkit-font-smoothing: none;
+}
+
+/* ── CRT Scanlines ── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(0, 0, 0, 0.10) 3px,
+    rgba(0, 0, 0, 0.10) 4px
+  );
+}
+
+/* ── Pixel grid ── */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(0, 230, 118, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 230, 118, 0.035) 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+main, header, footer, section, .rel {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Pixel font ── */
+.pixel { font-family: var(--pixel); }
+
+/* ── Pixel button press ── */
+.px-btn {
+  transition: transform 0.06s linear, box-shadow 0.06s linear;
+}
+.px-btn:hover  { transform: translate(2px, 2px); }
+.px-btn:active { transform: translate(4px, 4px); box-shadow: none !important; }
+
+/* ── Blink ── */
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%,100% { opacity: 0; }
+}
+.blink { animation: blink 1s step-start infinite; }
+
+/* ── Step entrance ── */
+@keyframes px-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.anim-1 { animation: px-in 0.25s steps(5) forwards 0.00s; opacity: 0; }
+.anim-2 { animation: px-in 0.25s steps(5) forwards 0.10s; opacity: 0; }
+.anim-3 { animation: px-in 0.25s steps(5) forwards 0.20s; opacity: 0; }
+.anim-4 { animation: px-in 0.25s steps(5) forwards 0.30s; opacity: 0; }
+
+/* ── Scanline sweep ── */
+@keyframes sweep {
+  0%   { top: -6px; }
+  100% { top: 100%; }
+}
+.sweep {
+  position: fixed;
+  left: 0; right: 0;
+  height: 6px;
+  background: linear-gradient(180deg, transparent, rgba(0,230,118,0.06), transparent);
+  animation: sweep 10s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}

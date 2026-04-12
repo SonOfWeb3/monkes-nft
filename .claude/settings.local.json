@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(taskkill /F /IM node.exe)",
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(vercel:*)",
+      "Bash(npx next-auth:*)",
+      "Bash(curl -s \"https://www.tempofarm.xyz/api/auth/providers\")",
+      "Bash(curl -sv \"https://www.tempofarm.xyz/api/auth/signin/twitter\")",
+      "Bash(curl -s \"https://www.tempofarm.xyz/api/auth/signin/twitter\")",
+      "Bash(curl:*)",
+      "mcp__plugin_vercel-plugin_vercel__get_runtime_logs",
+      "mcp__plugin_vercel-plugin_vercel__list_teams",
+      "mcp__plugin_vercel-plugin_vercel__list_projects",
+      "mcp__plugin_vercel-plugin_vercel__list_deployments",
+      "Bash(npm install:*)",
+      "mcp__plugin_vercel-plugin_vercel__get_deployment_build_logs",
+      "Bash(netlify --version)",
+      "Bash(netlify status:*)",
+      "Bash(netlify login:*)",
+      "Bash(netlify sites:create --name monkes-nft)",
+      "Bash(netlify env:set TWITTER_CLIENT_ID \"MkpJRGtmYjlRSXRJQ0RpQzBCVFE6MTpjaQ\")",
+      "Bash(netlify env:set TWITTER_CLIENT_SECRET \"VjH94or2MwUjHQU3JH8IpBJzXRmRVNmPHWWv5ufxnSbqelqEIC\")",
+      "Bash(netlify env:set NEXTAUTH_SECRET \"gguEP0pnvM7CilgSUMtB9ZXj6wSIZQKorXCF5RELykU=\")",
+      "Bash(netlify env:set NEXTAUTH_URL \"https://www.tempofarm.xyz\")",
+      "Bash(netlify env:set MONGODB_URI \"mongodb+srv://tempoagentz:.Agentz.123.@cluster0.uues1yh.mongodb.net/tempoagentz?appName=Cluster0\")",
+      "Bash(netlify deploy:*)"
+    ]
+  }
+}
