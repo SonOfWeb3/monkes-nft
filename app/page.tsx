@@ -11,7 +11,7 @@ const PANEL = "#10101c";
 const BORDER = "#2a2a44";
 const TEXT = "#e8e8f0";
 
-const ANNOUNCEMENT_TWEET_ID = "2043018985038283044";
+const ANNOUNCEMENT_TWEET_ID = "2043703567689683214";
 const ANNOUNCEMENT_TWEET_URL = `https://x.com/tempofarmx/status/${ANNOUNCEMENT_TWEET_ID}`;
 const QUOTE_TWEET_TEXT =
   "Follow @tempofarmx, complete the steps on https://tempofarm.xyz and secure your whitelist spot on the farm.";
