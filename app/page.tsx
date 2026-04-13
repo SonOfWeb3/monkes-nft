@@ -12,9 +12,9 @@ const BORDER = "#2a2a44";
 const TEXT = "#e8e8f0";
 
 const ANNOUNCEMENT_TWEET_ID = "2043018985038283044";
-const ANNOUNCEMENT_TWEET_URL = `https://x.com/TempoFarm/status/${ANNOUNCEMENT_TWEET_ID}`;
+const ANNOUNCEMENT_TWEET_URL = `https://x.com/tempofarmx/status/${ANNOUNCEMENT_TWEET_ID}`;
 const QUOTE_TWEET_TEXT =
-  "Follow @tempofarm, complete the steps on https://tempofarm.xyz and secure your whitelist spot on the farm.";
+  "Follow @tempofarmx, complete the steps on https://tempofarm.xyz and secure your whitelist spot on the farm.";
 const WHITELIST_ENDS_AT_UTC = Date.UTC(2026, 3, 15, 15, 0, 0);
 
 const XIcon = ({ size = 12 }: { size?: number }) => (
@@ -75,9 +75,9 @@ const STEPS = [
   {
     id: 1,
     label: "FOLLOW ON X",
-    desc: "Follow @TempoFarm on X to stay ahead of every update.",
+    desc: "Follow @tempofarmx on X to stay ahead of every update.",
     action: "FOLLOW",
-    href: "https://twitter.com/intent/follow?screen_name=TempoFarm",
+    href: "https://twitter.com/intent/follow?screen_name=tempofarmx",
     Icon: XIcon,
     hasWalletInput: false,
   },
@@ -661,7 +661,7 @@ export default function Home() {
             (C) 2026 TEMPO FARM
           </span>
           <a
-            href="https://x.com/TempoFarm"
+            href="https://x.com/tempofarmx"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5"
@@ -673,7 +673,7 @@ export default function Home() {
               e.currentTarget.style.color = DIM;
             }}
           >
-            <XIcon size={8} /> @TEMPOFARM
+            <XIcon size={8} /> @TEMPOFARMX
           </a>
         </div>
       </footer>
